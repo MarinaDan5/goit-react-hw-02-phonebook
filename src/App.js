@@ -18,10 +18,10 @@ class App extends Component {
     filter: '',
   };
 
-  deleteContact = e => {
+  deleteContact = contactId => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => {
-        return contact.id !== e.target.id;
+        return contact.id !== contactId;
       }),
     }));
   };
